@@ -1,4 +1,5 @@
-[![DOI](https://zenodo.org)](https://doi.org/10.5281/zenodo.22733606)
+[![DOI](https://shields.io)](https://doi.org/10.5281/zenodo.22733606)
+
 
 # Healthcare Multi-Agent System with PHI Leakage Evaluation
 
