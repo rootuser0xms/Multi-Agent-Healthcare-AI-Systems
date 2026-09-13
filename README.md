@@ -16,17 +16,17 @@ A three-agent healthcare AI pipeline (research lookup, patient/insurance history
 
 ```
                         ┌───────────────────────┐
-                        │      Orchestrator       │
-                        │  (routes tasks, scopes  │
-                        │   what each agent sees) │
-                        └───────────┬─────────────┘
+                        │      Orchestrator     │
+                        │ (routes tasks, scopes │
+                        │ what each agent sees) │
+                        └───────────┬───────────┘
               ┌─────────────────────┼─────────────────────┐
               ▼                     ▼                     ▼
    ┌───────────────────┐ ┌────────────────────┐ ┌─────────────────────────┐
-   │ Agent 1: Research  │ │ Agent 2: Patient    │ │ Agent 3: Imaging +      │
-   │ (live PubMed API)  │ │ History/Insurance   │ │ Diagnosis + Booking     │
-   │                     │ │ (PHI-sanitized,     │ │ (MedGemma 1.5 4B-it +   │
-   │                     │ │  purpose-scoped)    │ │  escalation logic)      │
+   │ Agent 1: Research │ │ Agent 2: Patient   │ │   Agent 3: Imaging +    │
+   │ (live PubMed API) │ │ History/Insurance  │ │   Diagnosis + Booking   │
+   │                   │ │ (PHI-sanitized,    │ │   (MedGemma 1.5 4B-it + │
+   │                   │ │  purpose-scoped)   │ │    escalation logic)    │
    └───────────────────┘ └────────────────────┘ └─────────────────────────┘
 ```
 
