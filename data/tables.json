@@ -1,0 +1,129 @@
+{
+  "table_iv_timing": [
+    {
+      "operation": "Sanitized patient lookup",
+      "n": 211,
+      "unit": "ms",
+      "mean": 2.9,
+      "median": 3.1,
+      "stdev": 1.0
+    },
+    {
+      "operation": "Naive (unsanitized) lookup",
+      "n": 190,
+      "unit": "ms",
+      "mean": 1.1,
+      "median": 1.1,
+      "stdev": 0.1
+    },
+    {
+      "operation": "Imaging analysis (2 MedGemma calls + booking)",
+      "n": 402,
+      "unit": "s",
+      "mean": 19.2,
+      "median": 18.84,
+      "stdev": 5.84
+    },
+    {
+      "operation": "PubMed literature search",
+      "n": 213,
+      "unit": "s",
+      "mean": 0.68,
+      "median": 0.59,
+      "stdev": 0.42
+    },
+    {
+      "operation": "Full patient visit (sanitized)",
+      "n": 397,
+      "unit": "s",
+      "mean": 19.73,
+      "median": 19.09,
+      "stdev": 5.88
+    }
+  ],
+  "table_ii_leakage_stats": {
+    "per_modality_sanitized": {
+      "x": 0,
+      "n": 20,
+      "ci_low_pct": 0.0,
+      "ci_high_pct": 16.84
+    },
+    "per_modality_naive": {
+      "x": 20,
+      "n": 20,
+      "ci_low_pct": 83.16,
+      "ci_high_pct": 100.0
+    },
+    "pooled_sanitized": {
+      "x": 0,
+      "n": 80,
+      "ci_low_pct": 0.0,
+      "ci_high_pct": 4.51
+    },
+    "pooled_naive": {
+      "x": 80,
+      "n": 80,
+      "ci_low_pct": 95.49,
+      "ci_high_pct": 100.0
+    },
+    "fisher_exact_p": 2.1728472662933512e-47
+  },
+  "table_iii_blast_radius": [
+    {
+      "scope": "full_clinical",
+      "fields": "7 of 7",
+      "Bw": 10.5,
+      "Bw_reduction_pct": null,
+      "payload_bytes": 213,
+      "byte_reduction_pct": null
+    },
+    {
+      "scope": "booking",
+      "fields": "3 of 7",
+      "Bw": 2.5,
+      "Bw_reduction_pct": 76.2,
+      "payload_bytes": 104,
+      "byte_reduction_pct": 51.2
+    },
+    {
+      "scope": "insurance_verification",
+      "fields": "3 of 7",
+      "Bw": 3.5,
+      "Bw_reduction_pct": 66.7,
+      "payload_bytes": 87,
+      "byte_reduction_pct": 59.2
+    }
+  ],
+  "table_i_escalation": [
+    {
+      "iteration": "1. Naive substring",
+      "TP": 15,
+      "FP": 14,
+      "TN": 1,
+      "FN": 0,
+      "precision": 0.517,
+      "recall": 1.0,
+      "f1": 0.682
+    },
+    {
+      "iteration": "2. Fixed 4-word window",
+      "TP": 15,
+      "FP": 3,
+      "TN": 12,
+      "FN": 0,
+      "precision": 0.833,
+      "recall": 1.0,
+      "f1": 0.909
+    },
+    {
+      "iteration": "3. Sentence-scope NegEx",
+      "TP": 15,
+      "FP": 0,
+      "TN": 15,
+      "FN": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  ]
+}
