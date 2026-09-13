@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org)](https://doi.org/10.5281/zenodo.22733606)
+
 # Healthcare Multi-Agent System with PHI Leakage Evaluation
 
 A three-agent healthcare AI pipeline (research lookup, patient/insurance history, imaging + diagnosis + booking), evaluated for internal-channel PHI leakage using a methodology adapted from **AgentLeak** (El Yagoubi et al., 2026). This repository accompanies the paper.
