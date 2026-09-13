@@ -1,0 +1,27 @@
+# Healthcare Multi-Agent System - Python dependencies
+# Install with: pip install -r requirements.txt
+# Tested with Python 3.11
+
+# --- Synthetic data generation (data/generate_patients.py) ---
+faker
+
+# --- PubMed API access (tools/pubmed_tool.py) ---
+requests
+
+# --- Imaging dataset download/preparation (data/load_multimodal_xrays.py) ---
+datasets
+medmnist
+huggingface_hub
+
+# --- MedGemma inference (tools/medgemma_tool.py) ---
+torch
+torchvision
+torchaudio
+transformers
+accelerate
+pillow
+
+# --- Statistics and figure/table reproduction (tools/generate_paper_artifacts.py) ---
+numpy
+scipy
+matplotlib
